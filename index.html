@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add/Remove Photo</title>
+    <link rel="stylesheet" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="icon" type="images/x-icon" href="./logo-modified.png" />
+
+    <link rel="stylesheet" href="aos.css" />
+  </head>
+  <body onload="myFunction()">
+    <div id="loader"></div>
+
+    <!-- <div class="photo-section">
+        <button id="addPhoto">Add Photo</button>
+        <button id="removeAll">Remove All Photos</button>
+        <input type="file" id="photoInput" accept="image/*" multiple style="display:none;">
+    </div>
+
+    <div class="photo-container" id="photoContainer"></div> -->
+    <div id="myDiv">
+      <nav data-aos="fade-down">
+        <div class="nav_overlay"></div>
+        <div class="circle"></div>
+        <ul>
+          <a href="#home"> <li>home</li>
+          <li class="invisable" id="h"><i class="fa-solid fa-house fa-lg"></i></li></a>
+          <a href="#offers"> <li>Offers</li>
+            <li class="invisable"><i class="fa-solid fa-table-list fa-lg"></i></li></a>
+          <li id="dmshky">الدمشقي <div class="chef-hat"><img src="./1st_half-removebg-preview.png" alt="" srcset=""></div></li>
+          <a href="#menu"> <li>menu</li>
+            <li class="invisable"><i class="fa-solid fa-clipboard-list fa-lg"></i></li></a>
+          <a href="#rate-sec"> <li>rate us</li>
+            <li class="invisable"><i class="fa-solid fa-receipt fa-lg"></i></li></a>
+        </ul>
+      </nav>
+      <header id="home" class="size">
+        <!-- <div class="overlay"></div> -->
+        <div class="container">
+          <div class="header_content">
+            <div class="header-intro" data-aos="fade-left" data-aos-delay="500">
+              <h1>Lorem ipsum</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit,
+                assumenda natus? Accusamus, sequi praesentium? Fugit, eius
+                reiciendis exercitationem harum consequuntur ullam fuga non.
+                Animi eligendi ex libero, sapiente fugiat reprehenderit? Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Itaque modi
+                doloribus, perferendis beatae ducimus quas suscipit dicta
+                accusantium eligendi adipisci numquam? Rerum at reprehenderit
+                veniam quidem minus quas facere eum.
+              </p>
+              <div class="social">
+                <a href="#">
+                 <div class="icon-holder"> <i class="fa-brands fa-facebook-f fa-xl facebook" data-aos="fade" data-aos-delay="750"></i
+                ></div></a>
+                <a href="#"><div class="icon-holder"> <i class="fa-brands fa-x-twitter fa-xl x" data-aos="fade" data-aos-delay="800"></i></div></a>
+                <a href="#"> <div class="icon-holder"><i class="fa-brands fa-instagram fa-xl instagram" data-aos="fade" data-aos-delay="850"></i
+                ></div></a>
+                <a href="#"><div class="icon-holder"> <i class="fa-brands fa-whatsapp fa-xl" data-aos="fade" data-aos-delay="900"></i></div></a>
+                <a href="#"><div class="icon-holder"> <i class="fa-solid fa-phone fa-xl" data-aos="fade" data-aos-delay="950"></i></div></a>
+              </div>
+            </div>
+            <div class="img" data-aos="fade-right" data-aos-delay="500">
+              <img src="./logo.jpg" alt="" srcset="" />
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section id="offers" class="offers">
+        
+        <div class="container">
+          <div class="sec-intro" data-aos="fade-up" data-aos-delay="500">
+            <h1>offers</h1>
+            <div class="back-intro"><h1>offers</h1></div>
+          </div>
+          <div class="holder" id="holder" data-aos="fade-up" data-aos-delay="500">
+          <div class="blured-overlay" id="bluring"></div>
+            
+            <div class="pop-up" id="myElement1">
+              <button class="pop-x" id="x" onclick="invis()">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+
+              <div class="details">
+                <div class="first" >
+                  <h1 id="one">Lorem ipsum dolor sit amet.</h1>
+                  <p id="two">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolores porro atque maxime facilis temporibus optio quidem
+                    odit soluta assumenda necessitatibus.
+                  </p>
+                </div>
+                <div class="second">
+                <div class="price">
+                  <span class="num"><h1 id="three">500$</h1></span>
+                  <span class="discount"><h2 id="four">600$</h2></span>
+                  
+                </div>
+                <a href="#"><button class="order-now">order now!</button></a>
+              </div>
+              </div>
+              <div class="offer-img"></div>
+            </div>
+            <div class="boxes bg " id="blur1"  data-index="0" ></div>
+            <div class="boxes bg " id="blur2"  data-index="1">
+            </div>
+            <div class="boxes bg " id="blur3"  data-index="2">
+            </div>
+            <div class="boxes bg " id="blur4"  data-index="3">
+            </div>
+            <div class="boxes bg " id="blur5"  data-index="4">
+            </div>
+            <div class="boxes bg " id="blur6"  data-index="5">
+            </div>
+            <div class="boxes bg " id="blur7"  data-index="6">
+            </div>
+            <div class="boxes bg " id="blur8"  data-index="7">
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="order" id="menu">
+        <div class="container">
+          <div class="sec-intro" data-aos="fade-up" data-aos-delay="500">
+            <h1>menu</h1>
+            <div class="back-intro"><h1>menu</h1></div>
+          </div>
+          <div class="picture-line" data-aos="fade-up" data-aos-delay="500">
+            <div class="line-img" data-aos="fade-right" data-aos-delay="750"></div>
+            <div class="line-img" data-aos="fade-down" data-aos-delay="1000"></div>
+            <div class="line-img" data-aos="fade-left" data-aos-delay="750"></div>
+          </div>
+          <div class="menu-options" data-aos="fade-up" data-aos-delay="500">
+            <div class="menu-section">
+              <div class="overlay"></div>
+              <div class="overlay-jr"></div>
+              <div class="overlay-jr2"></div>
+              <div class="overlay-jr2 down"></div>
+              <div class="menu-sides"></div>
+              <div class="menu-sides right"></div>
+              <div class="menu-up-down"></div>
+              <div class="menu-up-down down"></div>  
+              <div class="half-circle upper "></div>
+              <div class="half-circle upper reflect"></div>
+              <div class="half-circle down3 "></div>
+              <div class="half-circle down2 "></div>
+              <!-- <div class="half-circle"></div>
+              <div class="half-circle"></div>
+              <div class="half-circle"></div> -->
+              <div class="offer-name">
+                shawrma<i class="fa-solid fa-burger fa-2xs"></i>
+              </div>
+              <div class="menu-offer">
+                <div class="food-price">
+                  <h1>shawrma mashwy</h1>
+                  <h1>7$</h1>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Natus nostrum voluptatem ab expedita omnis officia vitae quod
+                  in obcaecati dicta?
+                </p>
+              </div>
+              <div class="menu-offer">
+                <div class="food-price">
+                  <h1>shawrma mashwy</h1>
+                  <h1>7$</h1>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Natus nostrum voluptatem ab expedita omnis officia vitae quod
+                  in obcaecati dicta?
+                </p>
+              </div>
+              <div class="menu-offer">
+                <div class="food-price">
+                  <h1>shawrma mashwy</h1>
+                  <h1>7$</h1>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Natus nostrum voluptatem ab expedita omnis officia vitae quod
+                  in obcaecati dicta?
+                </p>
+              </div>
+            </div>
+            <div class="menu-section" data-aos="fade-up" data-aos-delay="650">
+              <div class="overlay"></div>
+              <div class="overlay-jr"></div>
+              <div class="overlay-jr2"></div>
+              <div class="overlay-jr2 down"></div>
+              <div class="menu-sides"></div>
+              <div class="menu-sides right"></div>
+              <div class="menu-up-down"></div>
+              <div class="menu-up-down down"></div>  
+              <div class="half-circle upper "></div>
+              <div class="half-circle upper reflect"></div>
+              <div class="half-circle down3 "></div>
+              <div class="half-circle down2 "></div>
+              <!-- <div class="half-circle"></div>
+              <div class="half-circle"></div>
+              <div class="half-circle"></div> -->
+              <div class="offer-name">
+                shawrma<i class="fa-solid fa-wine-glass fa-2xs"></i>
+              </div>
+              <div class="menu-offer">
+                <div class="food-price">
+                  <h1>shawrma mashwy</h1>
+                  <h1>7$</h1>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Natus nostrum voluptatem ab expedita omnis officia vitae quod
+                  in obcaecati dicta?
+                </p>
+              </div>
+              
+              <div class="menu-offer">
+                <div class="food-price">
+                  <h1>shawrma mashwy</h1>
+                  <h1>7$</h1>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Natus nostrum voluptatem ab expedita omnis officia vitae quod
+                  in obcaecati dicta?
+                </p>
+              </div>
+              <div class="menu-offer">
+                <div class="food-price">
+                  <h1>shawrma mashwy</h1>
+                  <h1>7$</h1>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Natus nostrum voluptatem ab expedita omnis officia vitae quod
+                  in obcaecati dicta?
+                </p>
+              </div>
+              <div class="menu-offer">
+                <div class="food-price">
+                  <h1>shawrma mashwy</h1>
+                  <h1>7$</h1>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Natus nostrum voluptatem ab expedita omnis officia vitae quod
+                  in obcaecati dicta?
+                </p>
+              </div>
+              <div class="menu-offer">
+                <div class="food-price">
+                  <h1>shawrma mashwy</h1>
+                  <h1>7$</h1>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Natus nostrum voluptatem ab expedita omnis officia vitae quod
+                  in obcaecati dicta?
+                </p>
+              </div>
+            </div>
+            
+           <div class="menu-section margin" data-aos="fade-up" data-aos-delay="800">
+              <div class="overlay"></div>
+              <div class="overlay-jr"></div>
+              <div class="overlay-jr2"></div>
+              <div class="overlay-jr2 down"></div>
+              <div class="menu-sides"></div>
+              <div class="menu-sides right"></div>
+              <div class="menu-up-down"></div>
+              <div class="menu-up-down down"></div>  
+              <div class="half-circle upper "></div>
+              <div class="half-circle upper reflect"></div>
+              <div class="half-circle down3 "></div>
+              <div class="half-circle down2 "></div>
+              <!-- <div class="half-circle upper right"></div>
+              <div class="half-circle upper left reflect1"></div>
+              <div class="half-circle down right reflect2"></div>
+              <div class="half-circle down left reflect3"></div> -->
+
+              <!-- <div class="half-circle"></div>
+              <div class="half-circle"></div>
+              <div class="half-circle"></div> -->
+              <div class="offer-name">
+                shawrma<i class="fa-solid fa-utensils fa-2xs" ></i>
+              </div>
+              <div class="menu-offer">
+                <div class="food-price">
+                  <h1>shawrma mashwy</h1>
+                  <h1>7$</h1>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Natus nostrum voluptatem ab expedita omnis officia vitae quod
+                  in obcaecati dicta?
+                </p>
+              </div>
+              <div class="menu-offer">
+                <div class="food-price">
+                  <h1>shawrma mashwy</h1>
+                  <h1>7$</h1>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Natus nostrum voluptatem ab expedita omnis officia vitae quod
+                  in obcaecati dicta?
+                </p>
+              </div>
+              <div class="menu-offer">
+                <div class="food-price">
+                  <h1>shawrma mashwy</h1>
+                  <h1>7$</h1>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Natus nostrum voluptatem ab expedita omnis officia vitae quod
+                  in obcaecati dicta?
+                </p>
+              </div>
+              <div class="menu-offer">
+                <div class="food-price">
+                  <h1>shawrma mashwy</h1>
+                  <h1>7$</h1>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Natus nostrum voluptatem ab expedita omnis officia vitae quod
+                  in obcaecati dicta?
+                </p>
+              </div>
+              <div class="menu-offer">
+                <div class="food-price">
+                  <h1>shawrma mashwy</h1>
+                  <h1>7$</h1>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Natus nostrum voluptatem ab expedita omnis officia vitae quod
+                  in obcaecati dicta?
+                </p>
+              </div>
+              <div class="menu-offer">
+                <div class="food-price">
+                  <h1>shawrma mashwy</h1>
+                  <h1>7$</h1>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Natus nostrum voluptatem ab expedita omnis officia vitae quod
+                  in obcaecati dicta?
+                </p>
+              </div>
+              <div class="menu-offer">
+                <div class="food-price">
+                  <h1>shawrma mashwy</h1>
+                  <h1>7$</h1>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Natus nostrum voluptatem ab expedita omnis officia vitae quod
+                  in obcaecati dicta?
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="rating" id="rate-sec">
+        <div class="container">
+          <div class="sec-intro" data-aos="fade-up" data-aos-delay="500">
+            <h1>rating</h1>
+            <div class="back-intro"><h1>rating</h1></div>
+          </div>
+          <div class="options" id="options" data-aos="fade-up" >
+            <div class="menu-sects blured"   onclick="rate1()">
+              <h1>okay <div class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div></h1>
+              <div class="star"></div>
+            </div>
+            <div class="menu-sects blured" onclick="rate2()" >
+              <h1>not good<div class="star"><i class="fa-solid fa-star-half-stroke"></i><i class="fa-solid fa-star"></i></div></h1>
+            </div>
+            <div class="menu-sects blured" onclick="rate3()" >
+              <h1>alright <div class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div></h1>
+            </div>
+            <div class="menu-sects blured" onclick="rate4()" >
+              <h1>good <div class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div></h1>
+            </div>
+            <div class="menu-sects blured" onclick="rate5()" >
+              <h1>very good <div class="star"><i class="fa-solid fa-star-half-stroke"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div></h1>
+            </div>
+            <div class="menu-sects blured" onclick="rate6()" >
+              <h1>amazing <div class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div></h1>
+            </div>
+
+          </div>
+          <button id="rating" onclick="thanks()">rate us!</button>
+          <!-- <div id="thanks">شكرا لتعاملكم مع المطعم  <i class="fa-solid fa-check"></i></div> -->
+
+        </div>
+      </section>
+    </div>
+  </body>
+  <script src="main.js"></script>
+    <script src="loader.js"></script>
+  <script src="aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</html>
