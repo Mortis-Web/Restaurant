@@ -1,7 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: cursive;
+  font-family: derp;
   box-sizing: border-box;
 }
 /* 303ABF */
@@ -36,8 +36,8 @@ background-color: red;
   src: url(./Gulzar-Regular.ttf);
 }
 @font-face {
-  font-family: jura;
-  src: url(./Jura-VariableFont_wght.ttf);
+  font-family: derp;
+  src: url(DynaPuff-VariableFont_wdth%2Cwght.ttf);
 }
 
 #loader {
